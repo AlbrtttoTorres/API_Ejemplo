@@ -28,7 +28,7 @@ def predict():
     try:
         values = np.array([float(x) for x in data_str.split(",")]).reshape(1, -1)
         prediction = model.predict(values)
-        return jsonify({"prediction": prediction.tolist()[0]})
+        return jsonify({"prediction": (prediction.tolist()[0], round(2))})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
