@@ -5,8 +5,6 @@ import os
 
 app = Flask(__name__)
 
-# os.system("python model.py")
-
 with open("model.pkl", "rb") as f:
     model = pickle.load(f)
 
@@ -45,4 +43,6 @@ def predict_json():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    debug_mode = os.environ.get("FLASK_DEBUG", "false").lower() == "true"
+    app.run(host="0.0.0.0", port=port, debug=debug_mode)
