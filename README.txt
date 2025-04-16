@@ -24,7 +24,7 @@ Desarrollado como práctica grupal final de despliegue para The Bridge.
 📦 Instalación
 ----------------
 1. Clona el repositorio:
-   git clone https://github.com/tu-usuario/tu-repo.git
+   git clone https://github.com/AlbrtttoTorres/API_Manitas
    cd tu-repo
 
 2. Instala las dependencias:
