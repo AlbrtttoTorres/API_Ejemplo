@@ -1,5 +1,27 @@
-# vim: set ft=rst:
+# API de Predicción de Average Rating de Libros
 
-See https://help.pythonanywhere.com/ (or click the "Help" link at the top
-right) for help on how to use PythonAnywhere, including tips on copying and
-pasting from consoles, and writing your own web applications.
+Esta API permite predecir la valoración promedio (`average_rating`) de un libro a partir de sus características utilizando un modelo de regresión Random Forest.
+
+Desarrollado como práctica grupal de despliegue para The Bridge.
+
+EQUIPO FORMADO POR:
+
+Alberto Torres
+Carolina Monzón
+Patricia Galdos
+Enrique Caraballo
+Javier Vidal
+
+---
+
+## 📦 Requisitos
+
+- Python 3.10 o superior
+- Flask
+- scikit-learn
+- numpy
+- pandas
+
+Instalación de dependencias:
+```bash
+pip install -r requirements.txt
