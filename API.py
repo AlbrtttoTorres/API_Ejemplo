@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
 from flask import Flask, request, jsonify
 import pickle
 import numpy as np
@@ -58,7 +59,7 @@ def retrain():
         X = df[["ratings_count", "text_reviews_count", "num_pages"]]
         y = df["average_rating"]
         
-        new_model = LinearRegression()
+        new_model = RandomForestRegressor()
         new_model.fit(X, y)
         
         with open("model.pkl", "wb") as f:
