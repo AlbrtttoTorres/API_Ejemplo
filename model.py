@@ -5,7 +5,7 @@ import pickle
 
 df = pd.read_csv(r"C:\Users\javid\OneDrive\Escritorio\Javidev\API_Ejemplo\books.csv", on_bad_lines="skip")
 
-features = ["ratings_count", "text_reviews_count","  num_pages"]
+features = ["ratings_count","text_reviews_count","num_pages"]
 df = df.dropna(subset=features + ["average_rating"])
 
 df = df.sample(n=1000, random_state=42)
