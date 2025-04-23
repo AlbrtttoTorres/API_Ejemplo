@@ -13,13 +13,15 @@ with open("model.pkl", "rb") as f:
 @app.route("/")
 def index():
     return jsonify({
-        "mensaje": "API para predecir average_rating de libros.",
-        "uso": {
-            "GET /predict?data=ratings_count,text_reviews_count,num_pages": "Devuelve una predicción",
-            "POST /predict_json": {
-                "formato": "{'data': [ratings_count, text_reviews_count, num_pages]}"
-            }
-        }
+        " Bienvenido a la API de predicción de libros ": "Esta API predice la puntuación media (average_rating) de un libro a partir de sus características.",
+        " ¿Qué puedes hacer?": {
+            " GET /predict?data=ratings_count,text_reviews_count,num_pages":
+                "Usa esta ruta para enviar los datos en la URL y obtener una predicción.",
+            " POST /predict_json": 
+                "Envía un JSON con los datos para obtener la predicción. Formato: {'data': [ratings_count, text_reviews_count, num_pages]}",
+        },
+        " Formato esperado para los datos": "[ratings_count, text_reviews_count, num_pages]",
+        " Ejemplo de uso GET": "/predict?data=5000,800,320",
     })
 
 @app.route("/predict")
